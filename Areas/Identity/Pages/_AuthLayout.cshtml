@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+    <div class="bt-auth">
+        <div id="main">
+            <div id="tab-btn">
+                <a class="login-tab" href="/Identity/Account/Login">Sign In</a>
+                <a class="register-tab" href="/Identity/Account/Register">Sign up</a>
+            </div>
+            <div class="login-box">
+                        <form action="#" method="post" id="login-form">
+                            @RenderBody()
+                        </form>
+                </div>
+            </div>
+    </div>
+
+@section Scripts{
+        @await RenderSectionAsync("Scripts", required: false)
+<script>
+    $(function () {
+        var current = location.pathname;
+
+        $('.login-tab').each(function() {
+            var $this = $(this);
+            if (current.indexOf($this.attr('href')) !== -1) {
+                $this.addClass('active');
+            }
+        })
+        $('.register-tab').each(function () {
+            var $this = $(this);
+            if (current.indexOf($this.attr('href')) !== -1) {
+                $this.addClass('active');
+            }
+        })
+    })
+</script>
+
+
+
+}

@@ -1,0 +1,182 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.bt-auth {
+    display: flex;
+    margin-bottom: 60px;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: url(../olichon.jpg) no-repeat 0px 0px;
+    background-size: cover;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+#main {
+    max-width: 95%;
+    width: 500px;
+}
+
+#tab-btn {
+    display: flex;
+}
+
+.login-tab,
+.register-tab {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background-color: #37474f;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.active {
+    background-color: #eee;
+    color: #000;
+}
+
+.login-box,
+.register-box {
+    width: 100%;
+    margin: 20px auto;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    box-shadow: 0px 9px 24px 5px rgba(0, 0, 0, 0.04);
+    background: #fff;
+}
+
+.register-box {
+    display: none;
+}
+
+.inp {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border: 2px solid #888;
+    border-bottom: 5px solid #888;
+    background-color: #fff;
+    color: #666;
+}
+
+    .inp:focus {
+        outline: none;
+        border: 2px solid #555;
+        border-bottom: 5px solid #555;
+    }
+
+.sub-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 5px solid #444;
+}
+
+    .sub-btn:focus {
+        outline: none;
+    }
+
+    .sub-btn:active {
+        border: none;
+        margin-top: 5px;
+    }
+
+#forgot {
+    font-size: 20px;
+    color: #444;
+    text-decoration: none;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 15px;
+    font-variant: small-caps;
+    color: #333;
+    font-size: 30px;
+}
