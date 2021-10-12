@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using BugTracker.Models;
 
 namespace BugTracker.Areas.Identity.Data
 {
@@ -20,6 +21,6 @@ namespace BugTracker.Areas.Identity.Data
 
         [PersonalData]
         [Column(TypeName = "nvarchar(50)")]
-        public string userRole { get; set; }
+        public List<BT_UserRoles> selectRoles { get; set; }
     }
 }

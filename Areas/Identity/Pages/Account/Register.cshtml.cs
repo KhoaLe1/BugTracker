@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using BugTracker.Models;
 
 namespace BugTracker.Areas.Identity.Pages.Account
 {
@@ -46,6 +47,12 @@ namespace BugTracker.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            [Required]
+            
+            [DataType(DataType.Text)]
+            [Display(Name = "User Role")]
+            public List<BT_UserRoles> SelectRoles { get; set; }
+
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
@@ -85,7 +92,7 @@ namespace BugTracker.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new BugTrackerUser { UserName = Input.Email, Email = Input.Email, firstName = Input.FirstName, lastName = Input.LastName};
+                var user = new BugTrackerUser { UserName = Input.Email, Email = Input.Email, firstName = Input.FirstName, lastName = Input.LastName, selectRoles = Input.SelectRoles};
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
