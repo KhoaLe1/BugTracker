@@ -18,9 +18,10 @@ namespace BugTracker.Areas.Identity.Data
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
         public string lastName { get; set; }
-
+        /*
         [PersonalData]
         [Column(TypeName = "nvarchar(50)")]
         public List<BT_UserRoles> selectRoles { get; set; }
+        */
     }
 }

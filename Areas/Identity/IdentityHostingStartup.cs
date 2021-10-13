@@ -20,7 +20,12 @@ namespace BugTracker.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("BugTrackerContextConnection")));
 
-                services.AddDefaultIdentity<BugTrackerUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<BugTrackerUser>(options =>
+                {
+                    options.SignIn.RequireConfirmedAccount = false;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireUppercase = false;
+                })
                     .AddEntityFrameworkStores<BugTrackerContext>();
             });
         }
