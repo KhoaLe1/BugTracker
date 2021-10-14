@@ -14,8 +14,15 @@ for details on configuring this project to bundle and minify static web assets. 
     min-height: 100vh;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background: url(../olichon.jpg) no-repeat 0px 0px;
+    background: url(../uzu.jpg) no-repeat 0px 0px;
     background-size: cover;
+}
+.bt-tabs {
+    display: flex;
+    margin-bottom: 60px;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 a.navbar-brand {
   white-space: normal;
@@ -179,4 +186,9 @@ h2 {
     font-variant: small-caps;
     color: #333;
     font-size: 30px;
+}
+
+.center{
+    text-align:center;
+    width:100%;
 }
